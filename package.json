@@ -28,6 +28,7 @@
         "react-share": "^4.4.0",
         "react-spinners": "^0.13.4",
         "simple-peer": "^9.11.1",
+        "socket.io-client": "^4.5.2",
         "web-vitals": "^2.1.4"
     },
     "scripts": {
