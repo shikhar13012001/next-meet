@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/shikhar13012001/hackathon">
-    <img src="https://i.ibb.co/64TWCZn/standard-2.gif" alt="Logo" >
+    <img src="./public/assets/standard%20(2).gif" alt="Logo" >
   </a>
 
   <h3 align="center"></h3>
