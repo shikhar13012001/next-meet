@@ -6,8 +6,10 @@ const MyComponent = ({ url }) => {
                 backgroundColor: '#b1e1fc',
                 marginTop: '10px',
                 padding: '10px',
+
             }}
             textStyle={{
+                breakWord: 'break-all',
                 color: 'black',
                 fontWeight: 'bold',
             }}

@@ -47,11 +47,11 @@ const Home = () => {
                         </div>
                     </div>
                     <Box sx={{ width: '100%' }} className="flex items-center justify-center">
-                        <Divider sx={{ width: '300px', backgroundColor: '#1e2435' }} className="lightGrayBorder" />{' '}
+                        
                         <img src={JOIN} alt="join" />
                         {/* <img src={JOIN2} alt="join" width="150px" height="150px" /> */}
                         <img src={JOIN1} alt="join" width="150px" height="150px" />
-                        <Divider sx={{ width: '300px', backgroundColor: '#1e2435' }} className="lightGrayBorder" />
+                        
                     </Box>
 
                     {/* Join meet */}

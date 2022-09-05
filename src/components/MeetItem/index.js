@@ -43,6 +43,7 @@ const MeetCard = ({ user, peer }) => {
             <video
                 playsInline
                 autoPlay
+                muted
                 controls={false}
                 ref={videoRef}
                 className="object-cover rounded-lg"

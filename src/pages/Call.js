@@ -231,7 +231,8 @@ const JoinCall = () => {
                 sx={{ height: '90vh', padding: 3, overflow: 'auto' }}
             >
                 <Box sx={styles.MeetCard}>
-                    <video
+                     <video
+                        muted
                         playsInline
                         autoPlay
                         controls={false}
@@ -304,12 +305,12 @@ const JoinCall = () => {
                 </Grid>
             </Grid>
             <Grid container columns={12}>
-                <Grid item xs={2} md={2} lg={2} className="lightGrayBorder h-16 flex items-center justify-center">
+                <Grid item xs={2} md={2} lg={2} className="h-16 flex items-center justify-center">
                     <Typography variant="h6" sx={{ mb: 3, textAlign: 'center' }}>
                         <Clock format={'HH:mm:ss'} ticking={true} />
                     </Typography>
                 </Grid>
-                <Grid item xs={8} md={8} lg={8} className="lightGrayBorder h-16 control-panel">
+                <Grid item xs={8} md={8} lg={8} className="h-16 control-panel">
                     <Button variant="outlined" sx={{ borderRadius: 20 }} onClick={handleMic}>
                         {mic ? (
                             <TiMicrophone size={30} color="#b1e1fc" />
