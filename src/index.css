@@ -3,42 +3,41 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-zinc-900 text-gray-300;
-  }
-  input {
-    @apply bg-zinc-800 py-3 px-4 rounded-xl border-solid border-2 border-zinc-700 text-gray-300;
-  }
+    body {
+        @apply bg-zinc-900 text-gray-300;
+    }
+    input {
+        @apply bg-zinc-800 py-3 px-4 rounded-xl border-solid border-2 border-zinc-700 text-gray-300;
+    }
 }
 
 * {
-  font-family: "DM Sans", sans-serif!important;
+    font-family: 'DM Sans', sans-serif !important;
 }
 
-
-.lightGrayBorder{
-  border:1px solid #1e2435!important;
+.lightGrayBorder {
+    border: 1px solid #1e2435 !important;
 }
 
-.video-grid{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap:50px;
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 50px;
 }
-.localStream{
-  width:340px;
-  height:200px;
+.localStream {
+    width: 340px;
+    height: 200px;
 }
 
-.control-panel{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap:30px;
-  align-items: center;
+.control-panel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
 }
 
 .video-grid::-webkit-scrollbar {
-        display: none;
+    display: none;
 }
