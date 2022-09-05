@@ -22,7 +22,7 @@ const initialState = {
     isMenuOpen: false,
 };
 
-export const continueWithGoogle = createAsyncThunk('flipr/continueWithGoogle', async (thunkAPI) => {
+export const continueWithGoogle = createAsyncThunk('hackathon/continueWithGoogle', async (thunkAPI) => {
     try {
         const provider = new GoogleAuthProvider();
         const auth = getAuth();
@@ -32,7 +32,7 @@ export const continueWithGoogle = createAsyncThunk('flipr/continueWithGoogle', a
     }
 });
 
-export const signUp = createAsyncThunk('flipr/signUp', async ({ name, email, password }, thunkAPI) => {
+export const signUp = createAsyncThunk('hackathon/signUp', async ({ name, email, password }, thunkAPI) => {
     try {
         const response = await createUserWithEmailAndPassword(auth, email, password);
         const { user } = response;
@@ -45,7 +45,7 @@ export const signUp = createAsyncThunk('flipr/signUp', async ({ name, email, pas
     }
 });
 
-export const signIn = createAsyncThunk('flipr/signIn', async ({ email, password }, thunkAPI) => {
+export const signIn = createAsyncThunk('hackathon/signIn', async ({ email, password }, thunkAPI) => {
     try {
         const res = await signInWithEmailAndPassword(auth, email, password);
         return res.user.displayName;
@@ -54,12 +54,12 @@ export const signIn = createAsyncThunk('flipr/signIn', async ({ email, password 
     }
 });
 
-export const onLogout = createAsyncThunk('flipr/onLogout', async () => {
+export const onLogout = createAsyncThunk('hackathon/onLogout', async () => {
     await auth.signOut();
 });
 
-const fliprSlice = createSlice({
-    name: 'flipr',
+const hackathonSlice = createSlice({
+    name: 'hackathon',
     initialState,
     reducers: {
         toggleMenu: (state) => {
@@ -150,6 +150,6 @@ const fliprSlice = createSlice({
     },
 });
 
-export const { toggleMenu } = fliprSlice.actions;
+export const { toggleMenu } = hackathonSlice.actions;
 
-export default fliprSlice.reducer;
+export default hackathonSlice.reducer;

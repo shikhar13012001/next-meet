@@ -1,7 +1,16 @@
 import React from 'react';
-import { Typography } from '@mui/material';
+import { Typography, Box, Divider } from '@mui/material';
+// import Preview from "../../assets/preview.png";
 import QR from '../QR';
-const NotInCall = ({ handleOnClickJoin, id, presentUsers }) => {
+import SERVER from '../../config';
+import { FaQuoteLeft } from 'react-icons/fa';
+import { useParams, useNavigate } from 'react-router-dom';
+const NotInCall = () => {
+    const { id } = useParams();
+    const navigate = useNavigate();
+    const handleOnClickJoin = () => {
+        navigate(`/${id}`);
+    };
     return (
         <section className="w-full h-screen">
             <div className="p-8 h-full">
@@ -14,7 +23,7 @@ const NotInCall = ({ handleOnClickJoin, id, presentUsers }) => {
                             component="div"
                             sx={{ display: 'flex', alignItems: 'center', gap: 2 }}
                         >
-                            share the meet-code <QR url={id} />
+                            share the meet-code <QR url={`${SERVER}/${id}`} />
                         </Typography>
 
                         <Typography variant="subtitle1" color="GrayText">
@@ -22,8 +31,12 @@ const NotInCall = ({ handleOnClickJoin, id, presentUsers }) => {
                         </Typography>
                     </div>
                     {/* Number of people in the meet */}
+                    <Box sx={{ width: '100%' }} className="flex items-center justify-center">
+                        <Typography variant="h2" sx={{fontWeight:'bold'}}>
+                            <FaQuoteLeft size={50} /> Great Meetings are just a click away
+                        </Typography>
+                    </Box>
 
-                    <div className="text-xl font-semibold">{presentUsers.length} people are in the call</div>
                     {/* Join */}
                     <div className="w-full text-center">
                         <button

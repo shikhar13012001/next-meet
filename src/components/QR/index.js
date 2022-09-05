@@ -70,10 +70,10 @@ export default function BasicModal({ url }) {
                         }}
                     >
                         <WhatsappShareButton url={url}>
-                            <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" />
+                            <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="whatsapp" />
                         </WhatsappShareButton>
                         <TwitterShareButton url={url}>
-                            <img src="https://img.icons8.com/color/48/000000/twitter--v1.png" />
+                            <img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="twitter" />
                         </TwitterShareButton>
                     </Box>
                 </Box>

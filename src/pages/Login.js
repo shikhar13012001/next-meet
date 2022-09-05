@@ -1,6 +1,6 @@
 import { FcGoogle } from 'react-icons/fc';
 import { useNavigate } from 'react-router-dom';
-import { continueWithGoogle, signIn } from '../features/flipr/fliprSlice';
+import { continueWithGoogle, signIn } from '../features/hackathon/hackathonSlice';
 import { useDispatch } from 'react-redux';
 import withoutAuth from '../utils/withoutAuth';
 import { useState } from 'react';

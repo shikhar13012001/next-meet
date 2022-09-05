@@ -5,15 +5,17 @@ const MyComponent = ({ url }) => {
             containerStyle={{
                 backgroundColor: '#b1e1fc',
                 marginTop: '10px',
-                padding: '10px',
+                padding: '10px', // or any other css property
+                width: '100%',
             }}
-            textStyle={{
+            textStyle={{ 
                 color: 'black',
                 fontWeight: 'bold',
+                textOverflow: 'ellipsis', 
+                width: '100%',
             }}
-            text={url}
         >
-            {url}
+           {url}
         </ReactCopyToClipboardUI>
     );
 };

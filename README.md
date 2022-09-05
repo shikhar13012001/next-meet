@@ -113,15 +113,22 @@ To get a local copy up and running follow these simple steps.
     ```js
     npm start
     ```
-5.  in backend 
-    ```js
+5. switch to backend branch
+    ```sh
+    git checkout backend
+    ```
+    
+6. install NPM packages
+    ```sh
     npm install
     ```
 
-4. Start the backend
-    ```js
+
+7. start the server
+    ```sh
     npm run dev
     ```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
@@ -236,3 +243,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [material-ui-url]: https://material-ui.com/
 [tailwind-css]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
 [tailwind-css-url]: https://tailwindcss.com/
+
+
+## Reference 
+https://www.youtube.com/watch?v=JhyY8LdAQHU&list=PLK0STOMCFms4nXm1bRUdjhPg0coxI2U6h&index=4

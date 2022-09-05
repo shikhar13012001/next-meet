@@ -17,7 +17,7 @@ import Participant from '../components/Participant';
 import QR from '../components/QR';
 import Clock from 'react-live-clock';
 import Search from '../components/Participant/search';
-
+import SERVER from '../config';
 const styles = {
     MeetCard: {
         display: 'flex',
@@ -41,7 +41,6 @@ const JoinCall = () => {
     const [camera, setCamera] = useState(true);
     const [active, setActive] = useState(true);
     const [localStream, setLocalStream] = useState(null);
-    const [insideCall, setInsideCall] = useState(false);
     const [peers, setPeers] = useState([]);
     const localVideo = useRef(null);
     const socket = useRef();
@@ -50,10 +49,10 @@ const JoinCall = () => {
     const navigate = useNavigate();
 
     // get user
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const [search, setSearch] = useState('');
     useEffect(() => {
-        socket.current = io.connect('http://localhost:5000');
+        socket.current = io.connect(SERVER);
         if (user)
             navigator.mediaDevices
                 .getUserMedia({
@@ -128,6 +127,7 @@ const JoinCall = () => {
                         setPeers((users) => users.filter((p) => p.peerID !== id));
                     });
                 });
+        // eslint-disable-next-line
     }, [user, roomID]);
 
     const filteredPeers = (peers) =>
@@ -217,7 +217,7 @@ const JoinCall = () => {
         // filter peers
     };
     return (
-        <Grid container className="lightGrayBorder" columns={12} sx={{ minHeight: '100vh' }}>
+        <Grid container  columns={12} sx={{ minHeight: '100vh' }}>
             {/**
              * @Users video
              * @only MEET CARD GRIDS
@@ -227,11 +227,12 @@ const JoinCall = () => {
                 xs={12}
                 md={9}
                 lg={9}
-                className="lightGrayBorder video-grid"
+                className="video-grid"
                 sx={{ height: '90vh', padding: 3, overflow: 'auto' }}
             >
                 <Box sx={styles.MeetCard}>
-                    <video
+                     <video
+                        muted
                         playsInline
                         autoPlay
                         controls={false}
@@ -271,7 +272,7 @@ const JoinCall = () => {
                 ))}
             </Grid>
 
-            <Grid item xs={12} md={3} lg={3} className="lightGrayBorder">
+            <Grid item xs={12} md={3} lg={3}  >
                 <Grid container columns={12}>
                     <Grid
                         item
@@ -304,12 +305,12 @@ const JoinCall = () => {
                 </Grid>
             </Grid>
             <Grid container columns={12}>
-                <Grid item xs={2} md={2} lg={2} className="lightGrayBorder h-16 flex items-center justify-center">
+                <Grid item xs={2} md={2} lg={2} className="h-16 flex items-center justify-center">
                     <Typography variant="h6" sx={{ mb: 3, textAlign: 'center' }}>
                         <Clock format={'HH:mm:ss'} ticking={true} />
                     </Typography>
                 </Grid>
-                <Grid item xs={8} md={8} lg={8} className="lightGrayBorder h-16 control-panel">
+                <Grid item xs={8} md={8} lg={8} className="h-16 control-panel">
                     <Button variant="outlined" sx={{ borderRadius: 20 }} onClick={handleMic}>
                         {mic ? (
                             <TiMicrophone size={30} color="#b1e1fc" />

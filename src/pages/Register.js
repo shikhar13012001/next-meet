@@ -1,10 +1,10 @@
 import { FcGoogle } from 'react-icons/fc';
 import { useNavigate } from 'react-router-dom';
-import { continueWithGoogle } from '../features/flipr/fliprSlice';
+import { continueWithGoogle } from '../features/hackathon/hackathonSlice';
 import { useDispatch } from 'react-redux';
 import withoutAuth from '../utils/withoutAuth';
 import { useState } from 'react';
-import { signUp } from '../features/flipr/fliprSlice';
+import { signUp } from '../features/hackathon/hackathonSlice';
 
 const Register = () => {
     const navigate = useNavigate();

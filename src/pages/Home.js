@@ -5,12 +5,17 @@ import withAuth from '../utils/withAuth';
 import Menu from './Menu';
 import { useNavigate } from 'react-router-dom';
 import { v4 } from 'uuid';
-
+import { Typography } from '@mui/material';
+import JOIN from '../assets/home2.png';
+import JOIN1 from '../assets/home.png';
+import JOIN2 from '../assets/join.png';
+import { Box } from '@mui/system';
+import {Divider} from "@mui/material"
 const Home = () => {
     const navigate = useNavigate();
 
     const [meetingCode, setMeetingCode] = useState('');
-    const { userName, isMenuOpen } = useSelector((state) => state.flipr);
+    const { userName, isMenuOpen } = useSelector((state) => state.hackathon);
 
     if (isMenuOpen) {
         return <Menu />;
@@ -21,7 +26,7 @@ const Home = () => {
     };
 
     const handleOnClickStartNewCall = () => {
-        navigate(`/${v4()}`);
+        navigate(`/preview/${v4()}`);
     };
 
     return (
@@ -35,10 +40,20 @@ const Home = () => {
                             <OpenMenuIcon />
                         </div>
                         <div className="mt-5">
-                            <p className="my-2 text-3xl">High quality calls.</p>
-                            <p className="my-2 text-3xl">For FREE!</p>
+                            <Typography variant="h6">High quality calls.</Typography>
+                            <Typography variant="subtitle1" color="GrayText">
+                                For FREE!
+                            </Typography>
                         </div>
                     </div>
+                    <Box sx={{ width: '100%' }} className="flex items-center justify-center">
+                        
+                        <img src={JOIN} alt="join" />
+                        {/* <img src={JOIN2} alt="join" width="150px" height="150px" /> */}
+                        <img src={JOIN1} alt="join" width="150px" height="150px" />
+                        
+                    </Box>
+
                     {/* Join meet */}
                     <form className="flex flex-col gap-4 items-center w-full">
                         <input
@@ -56,6 +71,7 @@ const Home = () => {
                         </button>
                     </form>
                     {/* Start new call */}
+
                     <div className="w-full text-center">
                         <button
                             className="bg-white text-black w-full mt-4 font-bold p-4 rounded-2xl"
