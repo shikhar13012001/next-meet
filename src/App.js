@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import Loading from './pages/Loading';
 
 const App = () => {
-    const { isLoading } = useSelector((state) => state.flipr);
+    const { isLoading } = useSelector((state) => state.hackathon);
 
     if (isLoading) return <Loading />;
 

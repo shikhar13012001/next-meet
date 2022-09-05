@@ -36,7 +36,7 @@ const MeetCard = ({ user, peer }) => {
             videoRef.current.srcObject = stream;
             console.log(stream.getTracks(), 'stream');
         });
-    }, []);
+    }, [peer, user.uid]);
 
     return (
         <Box sx={styles.MeetCard}>
