@@ -217,7 +217,7 @@ const JoinCall = () => {
         // filter peers
     };
     return (
-        <Grid container className="lightGrayBorder" columns={12} sx={{ minHeight: '100vh' }}>
+        <Grid container  columns={12} sx={{ minHeight: '100vh' }}>
             {/**
              * @Users video
              * @only MEET CARD GRIDS
@@ -227,7 +227,7 @@ const JoinCall = () => {
                 xs={12}
                 md={9}
                 lg={9}
-                className="lightGrayBorder video-grid"
+                className="video-grid"
                 sx={{ height: '90vh', padding: 3, overflow: 'auto' }}
             >
                 <Box sx={styles.MeetCard}>
@@ -272,7 +272,7 @@ const JoinCall = () => {
                 ))}
             </Grid>
 
-            <Grid item xs={12} md={3} lg={3} className="lightGrayBorder">
+            <Grid item xs={12} md={3} lg={3}  >
                 <Grid container columns={12}>
                     <Grid
                         item
