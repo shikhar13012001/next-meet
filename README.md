@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/shikhar13012001/hackathon">
-    <img src="./public/assets/standard%20(2).gif" alt="Logo" >
+    <img src="https://raw.githubusercontent.com/shikhar13012001/hackathon/main/public/assets/standard%20(2).gif" alt="Logo" >
   </a>
 
   <h3 align="center"></h3>
@@ -39,7 +39,7 @@
 
 ## About The Project
 
-[scs](../hackathon/public/assets/Screenshot%20(274).png)
+[scs](https://raw.githubusercontent.com/shikhar13012001/hackathon/main/public/assets/Screenshot%20(274).png)
 
 <!-- right here description-->
 
@@ -133,11 +133,11 @@ To get a local copy up and running follow these simple steps.
 
 <!-- USAGE EXAMPLES -->
 ##  ScreenShots 
-![Screenshot1](./public/assets/Screenshot%20(274).png)
-![Screenshot1](./public/assets/Screenshot%20(275).png)
-![Screenshot1](./public/assets/Screenshot%20(276).png)
-![Screenshot1](./public/assets/screenshot.jpeg)
-![Screenshot1](./public/assets/Screenshot%20(278).png)
+![Screenshot1](https://raw.githubusercontent.com/shikhar13012001/hackathon/main/public/assets/Screenshot%20(274).png)
+![Screenshot1](https://raw.githubusercontent.com/shikhar13012001/hackathon/main/public/assets/Screenshot%20(275).png)
+![Screenshot1](https://raw.githubusercontent.com/shikhar13012001/hackathon/main/public/assets/Screenshot%20(276).png)
+![Screenshot1](https://raw.githubusercontent.com/shikhar13012001/hackathon/main/public/assets/screenshot.jpeg)
+![Screenshot1](https://raw.githubusercontent.com/shikhar13012001/hackathon/main/public/assets/Screenshot%20(278).png)
 
 ## Usage
 
