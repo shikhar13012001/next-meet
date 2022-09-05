@@ -17,7 +17,7 @@ import Participant from '../components/Participant';
 import QR from '../components/QR';
 import Clock from 'react-live-clock';
 import Search from '../components/Participant/search';
-
+import SERVER from '../config';
 const styles = {
     MeetCard: {
         display: 'flex',
@@ -53,7 +53,7 @@ const JoinCall = () => {
     const [user, loading, error] = useAuthState(auth);
     const [search, setSearch] = useState('');
     useEffect(() => {
-        socket.current = io.connect('http://localhost:5000');
+        socket.current = io.connect(SERVER);
         if (user)
             navigator.mediaDevices
                 .getUserMedia({

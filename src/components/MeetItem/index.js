@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { io } from 'socket.io-client';
-
+import SERVER from "../../config";
 const styles = {
     MeetCard: {
         display: 'flex',
@@ -26,7 +26,7 @@ const MeetCard = ({ user, peer }) => {
     const [isActive, setIsActive] = React.useState(false);
 
     React.useEffect(() => {
-        socketRef.current = io.connect('http://localhost:5000');
+        socketRef.current = io.connect(SERVER);
         socketRef.current.on('video permission', (payload) => {
             if (Boolean(payload) && user.uid === payload.user.uid) setIsActive(!payload.video);
         });
