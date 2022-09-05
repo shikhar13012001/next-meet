@@ -1,6 +1,6 @@
 import { FaTimes } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
-import { toggleMenu } from '../features/flipr/fliprSlice';
+import { toggleMenu } from '../features/hackathon/hackathonSlice';
 
 const CloseMenuIcon = () => {
     const dispatch = useDispatch();

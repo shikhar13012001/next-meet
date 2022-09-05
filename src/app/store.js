@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import fliprReducer from '../features/flipr/fliprSlice';
+import hackathonReducer from '../features/hackathon/hackathonSlice';
 
 export const store = configureStore({
     reducer: {
-        flipr: fliprReducer,
+        hackathon: hackathonReducer,
     },
 });

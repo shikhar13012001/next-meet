@@ -2,11 +2,11 @@ import { MdLogout } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import CloseMenuIcon from '../components/CloseMenuIcon';
-import { onLogout } from '../features/flipr/fliprSlice';
+import { onLogout } from '../features/hackathon/hackathonSlice';
 
 const Menu = () => {
     const dispatch = useDispatch();
-    const { userName } = useSelector((state) => state.flipr);
+    const { userName } = useSelector((state) => state.hackathon);
 
     return (
         <section className="w-full h-screen">

@@ -15,7 +15,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     const [meetingCode, setMeetingCode] = useState('');
-    const { userName, isMenuOpen } = useSelector((state) => state.flipr);
+    const { userName, isMenuOpen } = useSelector((state) => state.hackathon);
 
     if (isMenuOpen) {
         return <Menu />;

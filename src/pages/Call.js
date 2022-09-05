@@ -41,7 +41,6 @@ const JoinCall = () => {
     const [camera, setCamera] = useState(true);
     const [active, setActive] = useState(true);
     const [localStream, setLocalStream] = useState(null);
-    const [insideCall, setInsideCall] = useState(false);
     const [peers, setPeers] = useState([]);
     const localVideo = useRef(null);
     const socket = useRef();
@@ -50,7 +49,7 @@ const JoinCall = () => {
     const navigate = useNavigate();
 
     // get user
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const [search, setSearch] = useState('');
     useEffect(() => {
         socket.current = io.connect(SERVER);
@@ -128,6 +127,7 @@ const JoinCall = () => {
                         setPeers((users) => users.filter((p) => p.peerID !== id));
                     });
                 });
+        // eslint-disable-next-line
     }, [user, roomID]);
 
     const filteredPeers = (peers) =>
